@@ -1,8 +1,8 @@
+import { useState } from "react";
 import { FaPause } from "react-icons/fa6";
+import { IoPlay, IoVolumeOff } from "react-icons/io5";
 import { HiVolumeUp } from "react-icons/hi";
-import { IoVolumeOff } from "react-icons/io5";
 import { SiAirplayaudio } from "react-icons/si";
-
 import {
   IconPlayerTrackPrevFilled,
   IconPlayerTrackNextFilled,
@@ -10,6 +10,10 @@ import {
 } from "@tabler/icons-react";
 
 const Card = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const handlePlay = () => {
+    setIsPlaying((prev) => !prev);
+  };
   return (
     <div className="size-52 rounded-4xl sm:h-104 sm:w-63 bg-zinc-900 sm:rounded-3xl p-3.5 px-4 sm:p-4 flex flex-col justify-between">
       {/* imgCover */}
@@ -48,21 +52,37 @@ const Card = () => {
           </div>
         </div>
         {/* star and Playericon */}
-        <div className="relative flex items-center justify-center mb-2 ">
+        <div className="relative flex items-center justify-center mb-2">
           <div className="hidden sm:block absolute left-0 text-zinc-600 ">
             <IconStar stroke={2} size={20} />
           </div>
-          <div className="flex items-center gap-6">
+          <div className="relative flex items-center gap-6">
             <IconPlayerTrackPrevFilled
               size={30}
               sm:size={34}
-              className="text-zinc-200"
+              className="text-zinc-200 cursor-pointer active:scale-90 transition-transform duration-200"
             />
-            <FaPause size={34} sm:size={38} className="text-zinc-200" />
+            <div className="flex justify-center items-center">
+              <button onClick={handlePlay}>
+                {isPlaying ? (
+                  <IoPlay
+                    size={34}
+                    sm:size={38}
+                    className="text-zinc-200 cursor-pointer"
+                  />
+                ) : (
+                  <FaPause
+                    size={34}
+                    sm:size={38}
+                    className="text-zinc-200 cursor-pointer"
+                  />
+                )}
+              </button>
+            </div>
             <IconPlayerTrackNextFilled
               size={30}
               sm:size={34}
-              className="text-zinc-200"
+              className="text-zinc-200 cursor-pointer active:scale-90 transition-transform duration-200"
             />
           </div>
         </div>
