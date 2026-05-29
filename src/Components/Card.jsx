@@ -10,27 +10,35 @@ import {
 
 const Card = () => {
   return (
-    <div className="h-104 w-63 bg-zinc-950 rounded-3xl p-4 flex flex-col justify-between">
+    <div className="size-52 rounded-4xl sm:h-104 sm:w-63 bg-zinc-900 sm:rounded-3xl p-3.5 px-4 sm:p-4 flex flex-col justify-between">
       {/* imgCover */}
-      <div>
-        <img className="w-full rounded-2xl" src="cover.jpg" alt="" />
+      <div className="">
+        <img
+          className="sm:w-full w-18 rounded-2xl sm:rounded-2xl"
+          src="cover.jpg"
+          alt=""
+        />
       </div>
       {/* text and title */}
-      <div className="py-3 mb-1">
-      <div className="overflow-hidden relative">
-        {/* fade right */}
-        <div className="absolute inset-y-0 right-0 w-7 bg-linear-to-l from-black to-transparent z-10" />
-        <p className="whitespace-nowrap text-sm text-zinc-200 animate-marquee leading-none">
-          <span className="tracking-wider">STAY HERE 4 LIFE</span> (feat. Brent
-          Faiyaz)
-        </p>
-        <p className="text-[13px] text-neutral-400 tracking-wide font-light ">A$AP Rocky</p>
-      </div>
+      <div className="sm:py-3 sm:mb-1 pt-1.5">
+        <div className="overflow-hidden relative">
+          {/* fade right */}
+          <div className="hidden sm:block absolute inset-y-0 right-0 w-7 bg-linear-to-l from-black to-transparent z-10" />
+          <p className="whitespace-nowrap sm:text-sm text-zinc-200 animate-marquee leading-none">
+            <span className="tracking-wider sm:text-base text-[17px] leading-none">
+              STAY HERE 4 LIFE{" "}
+              <span className="hidden sm:inline ">(feat. Brent Faiyaz)</span>
+            </span>
+          </p>
+          <p className="sm:text-[13px] text-neutral-400 tracking-wide font-light ">
+            A$AP Rocky
+          </p>
+        </div>
       </div>
       {/* All 3 player container */}
-      <div className="flex flex-col justify-center gap-2 pb-3">
+      <div className="flex flex-col justify-center gap-2 sm:pb-3">
         {/* Player */}
-        <div className="flex flex-col gap-1 ">
+        <div className="hidden sm:flex flex-col gap-1 ">
           <div className="h-1 w-full bg-zinc-600 rounded-full">
             <div className="h-1 w-20 bg-zinc-100 rounded-full"></div>
           </div>
@@ -40,18 +48,26 @@ const Card = () => {
           </div>
         </div>
         {/* star and Playericon */}
-        <div className="relative flex items-center justify-center">
-          <div className="absolute left-0 text-zinc-600 ">
+        <div className="relative flex items-center justify-center mb-2 ">
+          <div className="hidden sm:block absolute left-0 text-zinc-600 ">
             <IconStar stroke={2} size={20} />
           </div>
           <div className="flex items-center gap-6">
-            <IconPlayerTrackPrevFilled size={34} className="text-zinc-200" />
-            <FaPause size={38} className="text-zinc-200" />
-            <IconPlayerTrackNextFilled size={34} className="text-zinc-200" />
+            <IconPlayerTrackPrevFilled
+              size={30}
+              sm:size={34}
+              className="text-zinc-200"
+            />
+            <FaPause size={34} sm:size={38} className="text-zinc-200" />
+            <IconPlayerTrackNextFilled
+              size={30}
+              sm:size={34}
+              className="text-zinc-200"
+            />
           </div>
         </div>
         {/* volume */}
-        <div className="relative flex items-center h-5 justify-center">
+        <div className="hidden relative sm:flex items-center h-5 justify-center">
           <div className="absolute h-1 w-43 bg-zinc-600 rounded-full">
             <div className="h-1 w-32 bg-zinc-100 rounded-full"></div>
           </div>
