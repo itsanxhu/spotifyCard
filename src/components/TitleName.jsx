@@ -1,6 +1,6 @@
 const TitleName = () => {
   return (
-    <div className="sm:py-3 sm:mb-1 pt-1.5">
+    <div className="pt-1.5 sm:py-3 sm:mb-1">
       <div className="overflow-hidden relative">
         {/* fade right */}
         <div className="hidden sm:block absolute inset-y-0 right-0 w-7 bg-linear-to-l from-zinc-900 to-transparent z-10" />

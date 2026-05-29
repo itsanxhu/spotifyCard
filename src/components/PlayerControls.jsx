@@ -15,8 +15,8 @@ const PlayerControls = () => {
   const playerBtn =
     "text-zinc-200 cursor-pointer active:scale-90 transition-transform duration-200";
   return (
-    <div className="relative flex items-center justify-center mb-2">
-      <div className="hidden sm:block absolute left-0 text-zinc-600 ">
+    <div className="flex items-center justify-center relative mb-2">
+      <div className="hidden absolute left-0 text-zinc-600 sm:block">
         <IconStar stroke={2} size={20} />
       </div>
       <div className="relative flex items-center gap-6">
@@ -25,7 +25,7 @@ const PlayerControls = () => {
           sm:size={34}
           className={playerBtn}
         />
-        <div className="flex justify-center items-center">
+        <div className="flex items-center justify-center">
           <button onClick={togglePlay}>
             {isPlaying ? (
               <IoPlay

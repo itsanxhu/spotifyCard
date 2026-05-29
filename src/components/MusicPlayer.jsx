@@ -1,10 +1,10 @@
 const MusicPlayer = () => {
   return (
     <div className="hidden sm:flex flex-col gap-1 ">
-      <div className="h-1 w-full bg-zinc-600 rounded-full">
-        <div className="h-1 w-20 bg-zinc-100 rounded-full"></div>
+      <div className="w-full h-1 rounded-full bg-zinc-600">
+        <div className="w-20 h-1 rounded-full bg-zinc-100"></div>
       </div>
-      <div className="text-zinc-500 flex justify-between tracking-wider text-[11px]">
+      <div className="flex justify-between text-[11px] text-zinc-500 tracking-wider">
         <p>2:11</p>
         <p>3:35</p>
       </div>
