@@ -13,15 +13,19 @@ const Card = () => {
     <div className="h-104 w-63 bg-zinc-950 rounded-3xl p-4 flex flex-col justify-between">
       {/* imgCover */}
       <div>
-        <img className="w-55 rounded-2xl" src="cover.jpg" alt="" />
+        <img className="w-full rounded-2xl" src="cover.jpg" alt="" />
       </div>
       {/* text and title */}
-      <div className="leading-none py-4">
-        <p className="truncate text-[15px] text-zinc-200">
+      <div className="py-3 mb-1">
+      <div className="overflow-hidden relative">
+        {/* fade right */}
+        <div className="absolute inset-y-0 right-0 w-7 bg-linear-to-l from-black to-transparent z-10" />
+        <p className="whitespace-nowrap text-sm text-zinc-200 animate-marquee leading-none">
           <span className="tracking-wider">STAY HERE 4 LIFE</span> (feat. Brent
           Faiyaz)
         </p>
-        <p className="text-sm text-zinc-400 tracking-wide">A$AP Rocky</p>
+        <p className="text-[13px] text-neutral-400 tracking-wide font-light ">A$AP Rocky</p>
+      </div>
       </div>
       {/* All 3 player container */}
       <div className="flex flex-col justify-center gap-2 pb-3">
@@ -31,7 +35,7 @@ const Card = () => {
             <div className="h-1 w-20 bg-zinc-100 rounded-full"></div>
           </div>
           <div className="text-zinc-500 flex justify-between tracking-wider text-[11px]">
-            <p>2:11</p>
+            <>2:11</>
             <p>3:35</p>
           </div>
         </div>
